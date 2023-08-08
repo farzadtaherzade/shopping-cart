@@ -1,3 +1,3 @@
-export function About(){
-    return <>Home</>
+export function About() {
+  return <>About</>;
 }

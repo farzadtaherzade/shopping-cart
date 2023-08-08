@@ -3,24 +3,28 @@
     "id": 1,
     "name": "Book",
     "price": 10.99,
-    "imgUrl": "/book.jpg"
+    "imgUrl": "/book.jpg",
+    "amount": 0
   },
   {
     "id": 2,
     "name": "Computer",
     "price": 1199,
-    "imgUrl": "/computer.jpg"
+    "imgUrl": "/computer.jpg",
+    "amount": 0
   },
   {
     "id": 3,
     "name": "Banana",
     "price": 1.05,
-    "imgUrl": "/banana.jpg"
+    "imgUrl": "/banana.jpg",
+    "amount": 0
   },
   {
     "id": 4,
     "name": "Car",
     "price": 14000,
-    "imgUrl": "/car.jpg"
+    "imgUrl": "/car.jpg",
+    "amount": 0
   }
 ]
