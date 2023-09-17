@@ -3,12 +3,14 @@ import { CartContainer } from "./CartContainer";
 import { useDispatch, useSelector } from "react-redux";
 import { useContext } from "react";
 import { ProductContext } from "../../context/productContext";
-import { clearCart } from "../../features/shop/shopSlice";
+import { clearCart, totalPrice } from "../../features/shop/shopSlice";
+import formatCurrency from "../../utils/formatCurrency";
 
 export function SideBar() {
-  const { total } = useSelector((state) => state.shop);
   const dispath = useDispatch();
+  const { total } = useSelector((state) => state.shop);
   const product = useContext(ProductContext);
+  dispath(totalPrice());
   return (
     <div
       className={`fixed top-0 left-0 h-screen bg-black bg-opacity-30 z-[99] transition-all duration-300 ${
@@ -35,11 +37,14 @@ export function SideBar() {
           <CartContainer />
         </div>
         <button
-          className="w-full text-white flex justify-center items-center rounded-sm mt-auto bg-blue-700 hover:bg-blue-800 py-2"
+          className="w-full text-white flex justify-center items-center rounded-sm mt-auto bg-blue-700 hover:bg-blue-800 py-2 mb-4"
           onClick={() => dispath(clearCart())}
         >
           Clear Cart
         </button>
+        <span className="text-black pt-10 text-xl font-bold">
+          Total: {formatCurrency(total)}
+        </span>
       </div>
     </div>
   );
