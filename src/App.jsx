@@ -5,7 +5,7 @@ import { Store } from "./pages/Store";
 import { Navbar } from "./components/Navbar";
 import { ProductContext } from "./context/productContext";
 import { useState } from "react";
-import { SideBar } from "./components/SiderBar/sideBar";
+import { SideBar } from "./components/SiderBar/SideBar";
 
 function App() {
   const [showCart, setShowCart] = useState(false);
